@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Mining Conferences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        function countdown() {
+            var deadlines = document.getElementsByClassName('countdown');
+            for (var i = 0; i < deadlines.length; i++) {
+                var deadlineDate = new Date(deadlines[i].dataset.deadline);
+                var currentDate = new Date();
+                var timeRemaining = deadlineDate - currentDate;
+
+                if (timeRemaining > 0) {
+                    var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                    deadlines[i].innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+                } else {
+                    deadlines[i].innerHTML = "Deadline passed";
+                }
+            }
+
+            setTimeout(countdown, 1000);
+        }
+
+        window.onload = countdown;
+    </script>
+</head>
+<body>
+    <h1>Data Mining Conferences</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Conference Name</th>
+                <th>Deadline</th>
+                <th>Countdown</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Conference A</td>
+                <td>2023-06-30</td>
+                <td class="countdown" data-deadline="2023-06-30"></td>
+            </tr>
+            <tr>
+                <td>Conference B</td>
+                <td>2023-07-15</td>
+                <td class="countdown" data-deadline="2023-07-15"></td>
+            </tr>
+            <tr>
+                <td>Conference C</td>
+                <td>2023-08-01</td>
+                <td class="countdown" data-deadline="2023-08-01"></td>
+            </tr>
+            <!-- Add more conference rows as needed -->
+        </tbody>
+    </table>
+</body>
+</html>
