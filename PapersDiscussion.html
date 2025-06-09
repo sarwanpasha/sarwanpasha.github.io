@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0030)https://sarwanpasha.github.io/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link src="images/cthulu.png" rel="shortcut icon" type="image/x-icon">
+
+    <title>Sarwan Ali</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px Helvetica, Sans-Serif;
+            line-height: 24px;
+            background: url(images/noise.jpg);
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #page-wrap {
+            width: 800px;
+            margin: 40px auto 60px;
+        }
+
+        #pic {
+            float: right;
+            margin: -30px 0 0 0;
+        }
+
+        h1 {
+            margin: 0 0 16px 0;
+            padding: 0 0 16px 0;
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -2px;
+            border-bottom: 1px solid #999;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 0 0 6px 0;
+            position: relative;
+        }
+
+            h2 span {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-style: italic;
+                font-family: Georgia, Serif;
+                font-size: 16px;
+                color: #999;
+                font-weight: normal;
+            }
+
+        p {
+            margin: 0 0 16px 0;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+            border-bottom: 1px dotted #999;
+        }
+
+            a:hover {
+                border-bottom-style: solid;
+                color: black;
+            }
+
+        ul {
+            margin: 0 0 32px 17px;
+        }
+
+        #objective {
+            width: 500px;
+            float: left;
+        }
+
+            #objective p {
+                font-family: Georgia, Serif;
+                font-style: italic;
+                color: #666;
+            }
+
+        dt {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: right;
+            padding: 0 26px 0 0;
+            width: 150px;
+            float: left;
+            height: 100px;
+            border-right: 1px solid #999;
+        }
+
+        dd {
+            width: 600px;
+            float: right;
+        }
+
+            dd.clear {
+                float: none;
+                margin: 0;
+                height: 15px;
+            }
+    </style>
+	
+	<style>
+	/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+	</style>
+	
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+	
+    <script>
+        function countdown() {
+            var deadlines = document.getElementsByClassName('countdown');
+            for (var i = 0; i < deadlines.length; i++) {
+                var deadlineDate = new Date(deadlines[i].dataset.deadline);
+                var currentDate = new Date();
+                var timeRemaining = deadlineDate - currentDate;
+
+                if (timeRemaining > 0) {
+                    var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                    deadlines[i].innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+                } else {
+                    deadlines[i].innerHTML = "Deadline passed";
+                }
+            }
+
+            setTimeout(countdown, 1000);
+        }
+
+        window.onload = countdown;
+    </script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.990.0" data-gr-ext-installed="">
+    <div id="page-wrap">
+
+       
+
+	   <div class="topnav">
+  <a href="https://sarwanpasha.github.io/">Home</a>
+  <a href="https://sarwanpasha.github.io/Sarwan_Ali_CV.pdf" target="_blank">CV</a>
+  <a href="https://scholar.google.com/citations?user=9dtXSoAAAAAJ&hl=en" target="_blank">Google Scholar</a>
+  <a href="https://sarwanpasha.github.io/conferences.html">Conferences</a>
+  
+</div>
+ <br>
+  <br>
+  
+  <h1>Interesting Conferences</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Conference Name</th>
+                <th>Deadline</th>
+                <th>Countdown</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CIKM (Main Track)</td>
+                <td>2023-05-26</td>
+                <td class="countdown" data-deadline="2023-05-26"></td>
+            </tr>
+            <tr>
+                <td>ACM BCB</td>
+                <td>2023-05-26</td>
+                <td class="countdown" data-deadline="2023-05-26"></td>
+            </tr>
+            <tr>
+                <td>NeurIPS(Benchmark And Dataset Track)</td>
+                <td>2023-06-01</td>
+                <td class="countdown" data-deadline="2023-06-01"></td>
+            </tr>
+			<tr>
+                <td>ACML(Journal Track)</td>
+                <td>2023-06-02</td>
+                <td class="countdown" data-deadline="2023-06-02"></td>
+            </tr>
+			<tr>
+                <td>CIKM (Short Paper Track)</td>
+                <td>2023-06-09</td>
+                <td class="countdown" data-deadline="2023-06-09"></td>
+            </tr>
+			<tr>
+                <td>ICONIP</td>
+                <td>2023-06-10</td>
+                <td class="countdown" data-deadline="2023-06-10"></td>
+            </tr>
+			<tr>
+                <td>EMNLP</td>
+                <td>2023-06-16</td>
+                <td class="countdown" data-deadline="2023-06-16"></td>
+            </tr>
+            <tr>
+                <td>ACML Conference</td>
+                <td>2023-06-23</td>
+                <td class="countdown" data-deadline="2023-06-23"></td>
+            </tr>
+			<tr>
+                <td>SimBig</td>
+                <td>2023-06-24</td>
+                <td class="countdown" data-deadline="2023-06-24"></td>
+            </tr>
+			<tr>
+                <td>ISBRA</td>
+                <td>2023-06-25</td>
+                <td class="countdown" data-deadline="2023-06-25"></td>
+            </tr>
+			<tr>
+                <td>Data Compression</td>
+                <td>2023-08-01</td>
+                <td class="countdown" data-deadline="2023-10-01"></td>
+            </tr>
+        </tbody>
+    </table>
+	
+	
+</body></html>
