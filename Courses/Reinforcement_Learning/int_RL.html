@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0030)https://sarwanpasha.github.io/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link src="images/cthulu.png" rel="shortcut icon" type="image/x-icon">
+
+    <title>Sarwan Ali</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 16px Helvetica, Sans-Serif;
+            line-height: 24px;
+            background: url(images/noise.jpg);
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #page-wrap {
+            width: 800px;
+            margin: 40px auto 60px;
+        }
+
+        #pic {
+            float: right;
+            margin: -30px 0 0 0;
+        }
+
+        h1 {
+            margin: 0 0 16px 0;
+            padding: 0 0 16px 0;
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: -2px;
+            border-bottom: 1px solid #999;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 0 0 6px 0;
+            position: relative;
+        }
+
+            h2 span {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-style: italic;
+                font-family: Georgia, Serif;
+                font-size: 16px;
+                color: #999;
+                font-weight: normal;
+            }
+
+        p {
+            margin: 0 0 16px 0;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+            border-bottom: 1px dotted #999;
+        }
+
+            a:hover {
+                border-bottom-style: solid;
+                color: black;
+            }
+
+        ul {
+            margin: 0 0 32px 17px;
+        }
+
+        #objective {
+            width: 500px;
+            float: left;
+        }
+
+            #objective p {
+                font-family: Georgia, Serif;
+                font-style: italic;
+                color: #666;
+            }
+
+        dt {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: right;
+            padding: 0 26px 0 0;
+            width: 150px;
+            float: left;
+            height: 100px;
+            border-right: 1px solid #999;
+        }
+
+        dd {
+            width: 600px;
+            float: right;
+        }
+
+            dd.clear {
+                float: none;
+                margin: 0;
+                height: 15px;
+            }
+    </style>
+	
+	<style>
+	/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+	</style>
+	
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+	
+    <script>
+        function countdown() {
+            var deadlines = document.getElementsByClassName('countdown');
+            for (var i = 0; i < deadlines.length; i++) {
+                var deadlineDate = new Date(deadlines[i].dataset.deadline);
+                var currentDate = new Date();
+                var timeRemaining = deadlineDate - currentDate;
+
+                if (timeRemaining > 0) {
+                    var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                    deadlines[i].innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+                } else {
+                    deadlines[i].innerHTML = "Deadline passed";
+                }
+            }
+
+            setTimeout(countdown, 1000);
+        }
+
+        window.onload = countdown;
+    </script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.990.0" data-gr-ext-installed="">
+    <div id="page-wrap">
+
+       
+
+	   <div class="topnav">
+  <a href="https://sarwanpasha.github.io/">Home</a>
+  <a href="https://sarwanpasha.github.io/Sarwan_Ali_CV.pdf" target="_blank">CV</a>
+  <a href="https://scholar.google.com/citations?user=9dtXSoAAAAAJ&hl=en" target="_blank">Google Scholar</a>
+  <!-- <a href="https://sarwanpasha.github.io/conferences.html">Conferences</a> -->
+  <a href="https://sarwanpasha.github.io/Courses/course_home.html">Teaching</a>
+  <a href="https://sarwanpasha.github.io/PapersDiscussion.html">Papers Discussion</a>
+  
+</div>
+ <br>
+  <br>
+
+  <!-- <td>Here I discuss interesting papers of mine and from other authors</td> -->
+  <h2>Introduction To Machine Learning</h2>
+  <!-- <h1>Interesting Conferences</h1> -->
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Slides</th>
+                <th>Video</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a style="color:violet">Topic 1.1: Core Foundations</a>
+		<br>
+		<strong>Introduction to Machine Learning:</strong> Definition, types of learning, applications, and real-world examples
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/CF_1.pdf" target="_blank" style="color:blue">Slides</a>  </td>
+                <td> <a> - </a> </td>
+            </tr>
+		
+	    <tr>
+                <td><a style="color:violet">Topic 1.2: Core Foundations</a> 
+		<br>
+		<strong>Mathematical Prerequisites:</strong> Linear algebra review, probability and statistics, calculus basics
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/CF_2.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 1.3: Core Foundations</a> 
+		<br>
+		<strong>Python Programming for ML:</strong> NumPy, Pandas, Matplotlib, Scikit-learn introduction
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/CF_3.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 1.4: Core Foundations</a> 
+		<br>
+		<strong>Data Preprocessing:</strong> Data cleaning, handling missing values, feature scaling, encoding categorical variables
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/CF_4.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 1.5: Core Foundations</a> 
+		<br>
+		<strong>Types of Machine Learning:</strong> Supervised, unsupervised, and reinforcement learning overview
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/CF_5.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:green">Topic 2.1: Supervised Learning</a> 
+		<br>
+		<strong>Linear Regression:</strong> Simple and multiple regression, cost functions, gradient descent
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/SL_1.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:green">Topic 2.2: Supervised Learning</a> 
+		<br>
+		<strong>Logistic Regression:</strong> Binary and multiclass classification, sigmoid function, maximum likelihood
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/SL_2.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+
+	    <tr>
+                <td><a style="color:green">Topic 2.3: Supervised Learning</a> 
+		<br>
+		<strong>Decision Trees:</strong> Construction, pruning, entropy, information gain, Gini impurity
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/SL_3.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+
+	    <tr>
+                <td><a style="color:green">Topic 2.4: Supervised Learning</a> 
+		<br>
+		<strong>Ensemble Methods:</strong> Random forests, bagging, boosting (AdaBoost, Gradient Boosting)
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/SL_4.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+
+	    <tr>
+                <td><a style="color:green">Topic 2.5: Supervised Learning</a> 
+		<br>
+		<strong>Support Vector Machines:</strong> Linear and non-linear SVM, kernel trick, margin optimization
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/SL_5.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+
+	    <tr>
+                <td><a style="color:green">Topic 2.6: Supervised Learning</a> 
+		<br>
+		<strong>k-Nearest Neighbors:</strong> Distance metrics, curse of dimensionality, choosing k
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/SL_6.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:green">Topic 2.7: Supervised Learning</a> 
+		<br>
+		<strong>Naive Bayes:</strong> Gaussian, multinomial, and Bernoulli variants
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/SL_7.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 3.1: Model Evaluation and Selection</a> 
+		<br>
+		<strong>Performance Metrics:</strong> Accuracy, precision, recall, F1-score, ROC curves, AUC
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/ME_1.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 3.2: Model Evaluation and Selection</a> 
+		<br>
+		<strong>Cross-Validation:</strong> k-fold, leave-one-out, stratified sampling
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/ME_2.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 3.3: Model Evaluation and Selection</a> 
+		<br>
+		<strong>Bias-Variance Tradeoff:</strong> Overfitting, underfitting, model complexity
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/ME_3.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 3.4: Model Evaluation and Selection</a> 
+		<br>
+		<strong>Hyperparameter Tuning:</strong> Grid search, random search, validation curves
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/ME_4.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:green">Topic 4.1: Unsupervised Learning</a> 
+		<br>
+		<strong>Clustering:</strong> k-means, hierarchical clustering, DBSCAN, evaluation metrics
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/UL_1.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:green">Topic 4.2: Unsupervised Learning</a> 
+		<br>
+		<strong>Dimensionality Reduction:</strong> Principal Component Analysis (PCA), t-SNE basics
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/UL_2.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:green">Topic 4.3: Unsupervised Learning</a> 
+		<br>
+		<strong>Association Rules:</strong> Market basket analysis, Apriori algorithm
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/UL_3.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 5.1: Advanced Topics</a> 
+		<br>
+		<strong>Neural Networks Introduction:</strong> Perceptron, multi-layer perceptrons, backpropagation
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/AT_1.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 5.2: Advanced Topics</a> 
+		<br>
+		<strong>Deep Learning Basics:</strong> Introduction to deep networks, activation functions, common architectures
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/AT_2.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 5.3: Advanced Topics</a> 
+		<br>
+		<strong>Feature Engineering:</strong> Feature selection, creation, and transformation techniques
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/AT_3.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 5.4: Advanced Topics</a> 
+		<br>
+		<strong>Time Series Analysis:</strong> Basic forecasting, trend analysis, seasonality
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/AT_4.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+	    <tr>
+                <td><a style="color:violet">Topic 5.5: Advanced Topics</a> 
+		<br>
+		<strong>Ethics in ML:</strong> Bias, fairness, interpretability, responsible AI practices
+		</td>
+                <td> <a class="email" href="https://sarwanpasha.github.io/Courses/AT_5.pdf" target="_blank" style="color:blue">Slides</a> </td>
+                <td> <a> - </a> </td>
+            </tr>
+
+
+	    
+            
+        </tbody>
+    </table>
+	
+	
+</body></html>
