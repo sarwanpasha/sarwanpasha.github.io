@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧪 Playground – Beginner HTML</title>
+  <style>
+    /* ---------- fresh & friendly styles ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    body {
+      background: #f8faff;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1.5rem;
+    }
+    .card {
+      max-width: 800px;
+      width: 100%;
+      background: white;
+      padding: 2rem 2rem 2.5rem;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px -12px rgba(0,20,40,0.25);
+      transition: 0.2s;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+      color: #0b1e33;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.2rem;
+      margin-bottom: 0.25rem;
+    }
+    .sub {
+      color: #3a5670;
+      margin-top: -0.2rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #7b9bcb;
+      padding-left: 1rem;
+      font-weight: 400;
+      font-size: 1.05rem;
+    }
+    .play-area {
+      background: #f2f6fe;
+      border-radius: 1.4rem;
+      padding: 1.8rem 1.8rem 2rem;
+      margin: 1.8rem 0 2rem;
+      border: 1px solid #dce6f5;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.2rem 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .row label {
+      font-weight: 500;
+      color: #1a3450;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    button {
+      background: #1d3b5c;
+      border: none;
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.6rem 1.6rem;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: 0.15s;
+      box-shadow: 0 4px 8px rgba(0,20,40,0.1);
+      letter-spacing: 0.3px;
+      border: 1px solid #2d4d72;
+    }
+    button:hover {
+      background: #234b72;
+      transform: scale(0.97);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    button:active {
+      background: #0f2a44;
+      transform: scale(0.94);
+    }
+    input[type="color"] {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #bacee6;
+      border-radius: 60px;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+    }
+    input[type="range"] {
+      width: 160px;
+      accent-color: #1d3b5c;
+    }
+    .demo-box {
+      background: #d4e0f2;
+      padding: 1.6rem 1.2rem;
+      border-radius: 1.4rem;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #0b1e33;
+      margin: 1.2rem 0 0.6rem;
+      border: 2px dashed #b0c8e5;
+      transition: 0.2s;
+      word-break: break-word;
+    }
+    .demo-box span {
+      background: rgba(255,255,255,0.4);
+      padding: 0.1rem 0.6rem;
+      border-radius: 40px;
+    }
+    .counter-box {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin: 0.8rem 0 0.2rem;
+    }
+    .counter-box p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      background: white;
+      padding: 0.2rem 1.2rem;
+      border-radius: 60px;
+      min-width: 70px;
+      text-align: center;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid #d0def0;
+    }
+    .hint {
+      margin-top: 2rem;
+      background: #eaf0fb;
+      padding: 1.2rem 1.6rem;
+      border-radius: 1.2rem;
+      color: #1e3b5a;
+      border-left: 6px solid #7b9bcb;
+      font-size: 0.95rem;
+    }
+    .hint code {
+      background: #d3e0f2;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #0a233b;
+    }
+    .foot {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: #4d6d8f;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>🧩 Play & Learn</h1>
+  <div class="sub">✏️ change values → see results instantly</div>
+
+  <!-- ====== INTERACTIVE PLAYGROUND ====== -->
+  <div class="play-area">
+
+    <!-- 1. COLOR PICKER -->
+    <div class="row">
+      <label for="colorPicker">🎨 pick a color</label>
+      <input type="color" id="colorPicker" value="#3a6b9e">
+      <span style="font-size:0.9rem; color:#2a4a6a;">(changes the box below)</span>
+    </div>
+
+    <!-- 2. RANGE SLIDER (size) -->
+    <div class="row">
+      <label for="sizeSlider">📏 size <span id="sizeLabel">100%</span></label>
+      <input type="range" id="sizeSlider" min="60" max="180" value="100">
+    </div>
+
+    <!-- 3. DEMO BOX (affected by color & size) -->
+    <div class="demo-box" id="demoBox">
+      <span>✨</span> hello, i change! <span>✨</span>
+    </div>
+
+    <!-- 4. COUNTER (click + reset) -->
+    <div class="counter-box">
+      <button id="incrementBtn">➕ click me</button>
+      <button id="resetBtn" style="background:#586f8a; border-color:#3f5775;">⟲ reset</button>
+      <p id="counterDisplay">0</p>
+    </div>
+
+    <!-- 5. SIMPLE TEXT INPUT (live preview) -->
+    <div class="row" style="margin-top: 0.8rem;">
+      <label for="textInput">✏️ type here</label>
+      <input type="text" id="textInput" placeholder="write something..." style="flex:1; padding:0.6rem 1rem; border-radius:60px; border:1px solid #bacee6; font-size:1rem; background:white;">
+    </div>
+    <div style="background:#e6eefa; padding:0.6rem 1rem; border-radius:60px; margin-top:0.3rem; font-size:1.1rem;">
+      👉 <span id="livePreview">your text appears here</span>
+    </div>
+  </div>
+
+  <!-- ====== HINT / ENCOURAGEMENT ====== -->
+  <div class="hint">
+    <strong>💡 try this:</strong><br>
+    • change the color picker → box background changes<br>
+    • move the slider → box grows / shrinks<br>
+    • click the button → counter goes up<br>
+    • type in the field → text updates live<br>
+    • <em>right-click → “inspect”</em> and play with styles!
+  </div>
+  <div class="foot">
+    ⚡ open this file in your browser & edit it in any text editor
+  </div>
+</div>
+
+<script>
+  // ----- all the interactive magic -----
+  (function() {
+    // DOM elements
+    const colorPicker = document.getElementById('colorPicker');
+    const sizeSlider = document.getElementById('sizeSlider');
+    const sizeLabel = document.getElementById('sizeLabel');
+    const demoBox = document.getElementById('demoBox');
+    const counterDisplay = document.getElementById('counterDisplay');
+    const incrementBtn = document.getElementById('incrementBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const textInput = document.getElementById('textInput');
+    const livePreview = document.getElementById('livePreview');
+
+    // ----- 1. color picker -----
+    colorPicker.addEventListener('input', function(e) {
+      const newColor = e.target.value;
+      demoBox.style.backgroundColor = newColor;
+      // also change the border accent for fun
+      demoBox.style.borderColor = newColor;
+    });
+
+    // ----- 2. size slider -----
+    sizeSlider.addEventListener('input', function(e) {
+      const val = e.target.value;
+      sizeLabel.textContent = val + '%';
+      // scale the demo box (transform makes it smooth)
+      demoBox.style.transform = `scale(${val / 100})`;
+      demoBox.style.transformOrigin = 'center center';
+    });
+
+    // set initial color & size from defaults
+    (function setInitial() {
+      // color from picker initial value
+      demoBox.style.backgroundColor = colorPicker.value;
+      demoBox.style.borderColor = colorPicker.value;
+      // size from slider initial value (100)
+      sizeLabel.textContent = '100%';
+      demoBox.style.transform = 'scale(1)';
+      demoBox.style.transformOrigin = 'center center';
+    })();
+
+    // ----- 3. counter -----
+    let count = 0;
+    function updateCounter() {
+      counterDisplay.textContent = count;
+    }
+    incrementBtn.addEventListener('click', function() {
+      count++;
+      updateCounter();
+    });
+    resetBtn.addEventListener('click', function() {
+      count = 0;
+      updateCounter();
+    });
+
+    // ----- 4. live text preview -----
+    textInput.addEventListener('input', function(e) {
+      const typed = e.target.value;
+      if (typed.trim() === '') {
+        livePreview.textContent = 'your text appears here';
+      } else {
+        livePreview.textContent = typed;
+      }
+    });
+
+    // bonus: reset the preview if input is cleared via code (just in case)
+    // also set default preview text
+    livePreview.textContent = 'your text appears here';
+
+    // extra: if someone wants to reset the demo box styles (not needed, but friendly)
+    console.log('🎉 Playground ready! Change anything and see the result.');
+  })();
+</script>
+
+<!-- 
+  🧑‍🏫 EXPLANATION for beginners:
+  - HTML structure: <div>, <button>, <input>, <span> etc.
+  - CSS: styles the page, colors, sizes, shadows.
+  - JavaScript (inside <script>): makes it interactive.
+  - Every time you change a value (color, slider, text) the page updates.
+  - Open this file in your browser, then edit it in Notepad / VS Code.
+  - Change texts, colors, numbers, and see what happens!
+-->
+</body>
+</html>
